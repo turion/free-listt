@@ -24,6 +24,15 @@ jobs:
       with:
         version: "0.11.0.0"
 
+  cabal-check:
+    name: "Cabal check"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: haskell-actions/setup@v2
+    - name: Cabal check
+      run: cabal check
+
   generateMatrix:
     name: "Generate matrix from cabal"
     runs-on: ubuntu-latest
