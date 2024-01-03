@@ -12,5 +12,5 @@ It is not a monad, but a lawful 'Applicative'.
 newtype ListT f a = ListT {getListT :: f [a]}
   deriving (Functor)
   deriving
-    (Applicative)
+    (Applicative, Alternative)
     via (Compose f [])
