@@ -10,7 +10,7 @@ This is isomorphic to the "old" @ListT@ transformer.
 It is not a monad, but a lawful 'Applicative'.
 -}
 newtype ListT f a = ListT {getListT :: f [a]}
-    deriving (Functor)
-    deriving
-        (Applicative)
-        via (Compose f [])
+  deriving (Functor)
+  deriving
+    (Applicative)
+    via (Compose f [])
