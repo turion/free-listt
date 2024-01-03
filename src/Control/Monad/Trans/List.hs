@@ -11,7 +11,7 @@ import Data.Functor.Classes
 import Control.Monad.Trans.Class
 
 -- free
-import Control.Monad.Trans.Free.Ap
+import Control.Monad.Trans.Free
 
 {- | The free list monad transformer.
 
