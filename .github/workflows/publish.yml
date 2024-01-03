@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+name: publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: haskell-actions/hackage-publish@v1
+        with:
+          hackageToken: ${{ secrets.HACKAGE_AUTH_TOKEN }}
+          packagesPath: ${{ runner.temp }}/packages
+          docsPath: ${{ runner.temp }}/docs
+          publish: false
