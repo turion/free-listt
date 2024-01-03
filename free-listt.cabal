@@ -26,7 +26,11 @@ version:            0.1.0.0
 synopsis: Lawful list and set monad transformers based on free monads
 
 -- A longer description of the package.
--- description:
+description:
+    This package provides a lawful @ListT@ implementation based on free monads.
+    It also provides an _Applicative_ list transformer, which is a lawful @Applicative@,
+    and isomorphic to the old @ListT@.
+
 
 -- The license under which the package is released.
 license:            MIT
