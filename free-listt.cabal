@@ -63,6 +63,10 @@ tested-with:
   GHC == 9.6.3
   GHC == 9.8.1
 
+source-repository head
+  type:     git
+  location: https://github.com/turion/free-listt.git
+
 common warnings
     ghc-options: -Wall
 
