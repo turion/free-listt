@@ -1,5 +1,5 @@
 # Revision history for free-listt
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.1.0.0 -- 2024-01-03
 
-* First version. Released on an unsuspecting world.
+* Provide free `ListT` and `Applicative` `ListT` transformers
