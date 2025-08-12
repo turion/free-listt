@@ -5,7 +5,7 @@ jobs:
     name: "Run hlint"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Set up HLint
       uses: haskell-actions/hlint-setup@v2
@@ -19,7 +19,7 @@ jobs:
     name: "Run fourmolu"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - uses: haskell-actions/run-fourmolu@v11
       with:
         version: "0.11.0.0"
@@ -28,7 +28,7 @@ jobs:
     name: "Cabal check"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - uses: haskell-actions/setup@v2
     - name: Cabal check
       run: cabal check
@@ -40,7 +40,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout base repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Extract the tested GHC versions
         id: set-matrix
         run: |
@@ -55,7 +55,7 @@ jobs:
       matrix: ${{ fromJSON(needs.generateMatrix.outputs.matrix) }}
     name: Haskell GHC ${{ matrix.ghc }} cabal
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: haskell-actions/setup@v2
         id: setup-haskell-build
         with:
