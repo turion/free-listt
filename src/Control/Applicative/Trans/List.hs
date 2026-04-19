@@ -1,3 +1,6 @@
+{-# LANGUAGE DeriveFoldable    #-}
+{-# LANGUAGE DeriveTraversable #-}
+
 -- | The applicative list transformer
 module Control.Applicative.Trans.List where
 
@@ -11,7 +14,7 @@ This is isomorphic to the "old" @ListT@ transformer.
 It is not a monad, but a lawful 'Applicative'.
 -}
 newtype ListT f a = ListT {runListT :: f [a]}
-  deriving (Functor)
+  deriving (Functor, Traversable, Foldable)
   deriving
     (Applicative, Alternative)
     via (Compose f [])
