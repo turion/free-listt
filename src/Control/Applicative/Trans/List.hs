@@ -1,6 +1,3 @@
-{-# LANGUAGE DeriveFoldable    #-}
-{-# LANGUAGE DeriveTraversable #-}
-
 -- | The applicative list transformer
 module Control.Applicative.Trans.List where
 

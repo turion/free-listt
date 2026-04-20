@@ -85,7 +85,7 @@ library
 
     default-extensions:
         ApplicativeDo,
-        DeriveFunctor,
+        DeriveTraversable,
         DerivingStrategies,
         DerivingVia,
         ImportQualifiedPost,
